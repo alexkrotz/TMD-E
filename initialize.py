@@ -19,7 +19,7 @@ def initialize(mat, sim):
     np.savetxt(sim.init_dir + '/k.csv', k, delimiter=',')
     if sim.e_model == 'tb':
         q, tau = k_to_q(k, K_points, K_points_tau)
-        from twobandmodel import twoband, two_band_params
+        from twobandmodel import two_band, two_band_params
         params = two_band_params(sim.material)
 
     return

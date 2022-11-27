@@ -2,15 +2,23 @@ import numpy as np
 def two_band_params(material):
 	if material == "WSe2":
 		t = 1.19  										# eV
+		lambda_c = 36.0e-3								# eV
+		lambda_v = 466e-3								# eV
 		E_g = 1.60  # eV
 	elif material == "WS2":
 		t = 1.37										# eV
+		lambda_c = 26.0e-3								# eV
+		lambda_v = 430e-3								# eV
 		E_g = 1.79  # eV
 	elif material == "MoSe2":
 		t = 0.94  										# eV
+		lambda_c = -31.0e-3								# eV
+		lambda_v = 184e-3								# eV
 		E_g = 1.47  # eV
 	else: # MoS2
 		t = 1.10										# eV
+		lambda_c = -3.0e-3								# eV
+		lambda_v = 148e-3								# eV
 		E_g = 1.66  # eV
 	return (E_g, lambda_c, lambda_v, t)
 
